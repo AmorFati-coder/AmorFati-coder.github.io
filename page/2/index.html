@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AmorFati's Blog - demo</title><meta name="keywords" content="demo"><meta name="author" content="AmorFati"><meta name="copyright" content="AmorFati"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="A Fresh MAn">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AmorFati&#39;s Blog">
+<meta property="og:url" content="http://amorfati-coder.github.io/page/2/index.html">
+<meta property="og:site_name" content="AmorFati&#39;s Blog">
+<meta property="og:description" content="A Fresh MAn">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://amorfati-coder.github.io/img/avatar.png">
+<meta property="article:author" content="AmorFati">
+<meta property="article:tag" content="demo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://amorfati-coder.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="http://amorfati-coder.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: AmorFati","link":"Link: ","source":"Source: AmorFati's Blog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AmorFati\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-10-28 18:59:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/back_love.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AmorFati's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">AmorFati's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/AmorFati-coder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/A629723354243@hotmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/07/20/2021-07-20-samba-%E5%85%B1%E4%BA%AB%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="samba 共享遇到的问题">samba 共享遇到的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-19T16:00:00.000Z" title="Created 2021-07-20 00:00:00">2021-07-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Debug/">Debug</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/VMware/">VMware</a></span></div><div class="content">需要在window下访问虚拟机
+
+
+先贴大佬链接https://blog.csdn.net/Wu_GuiMing/article/details/115031721
+
+但是我们需要虚拟机的IP地址，也就是en33的ip
+
+
+问题
+只显示127.0.0.1
+inet 127.0.0.1  netmask 255.0.0.0
+
+
+解决
+sudo dhclient ens33
+
+sudo ifconfig ens33
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/07/11/2021-05-02-%E4%B9%A6%E5%8D%95%E8%AE%B0%E5%BD%95/" title="书单记录">书单记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-10T16:00:00.000Z" title="Created 2021-07-11 00:00:00">2021-07-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Essays/">Essays</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/book/">book</a></span></div><div class="content">自2021看过的书</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/07/11/2021-05-02-%E5%BD%B1%E5%8D%95%E8%AE%B0%E5%BD%95/" title="影视记录">影视记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-10T16:00:00.000Z" title="Created 2021-07-11 00:00:00">2021-07-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Essays/">Essays</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/movie/">movie</a></span></div><div class="content">自2021看过的电影&&其他</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/07/11/2021-07-11-Groovy%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%B8%A6%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%9E%E4%BD%93%E7%B1%BB/" title="Groovy脚本生成带注释的实体类">Groovy脚本生成带注释的实体类</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-10T16:00:00.000Z" title="Created 2021-07-11 00:00:00">2021-07-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Jetbrain/">Jetbrain</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/idea/">idea</a></span></div><div class="content">出处忘了，之前自己编过一个，后来申请教育资格的时候，把原来的脚本忘了
+
+大驼峰、小驼峰 loombock
+import com.intellij.database.model.DasTable
+import com.intellij.database.util.Case
+import com.intellij.database.util.DasUtil
+import java.text.SimpleDateFormat
+import com.intellij.database.model.ObjectKind
+
+/*
+ * Available context bindings:
+ *   SELECTION   Iterable&lt;DasObject>
+ *   PROJECT     project
+ *   FILES       files helper
+ */
+
+packageName = "com.sample;"
+//优先级
+typeMapping = [
+        (~/(?i)tinyint/)                         : "byte" ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/07/11/2021-07-11-%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF/" title="注释模板">注释模板</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-10T16:00:00.000Z" title="Created 2021-07-11 00:00:00">2021-07-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Jetbrain/">Jetbrain</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/idea/">idea</a></span></div><div class="content">教程来源比较杂，出处不明，自己摸索着改了一点
+
+
+javadoc
+
+平常用showdoc写文档，又懒得装软件，showdoc提供的脚本还是蛮方便的
+*
+	* showdoc
+	* @catalog 测试文档/用户相关
+    * @author 
+	* @title 用户注册
+	* @description 用户注册的接口
+    * @date $date$ $time$$param$ $return$
+	* @method post
+	* @url 
+	* @param username 必选 string 用户名  
+	* @param password 必选 string 密码  
+	* @param name 可选 string 用户昵称  
+	* @return &#123;"error_code":0,"data":&#123;"uid":"1","username":"12154545","name":"吴系挂","groupid":2,"reg_time":"1436864169","last_login_time":"0"&#125;&#125;
+	* @retur ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/06/16/2021-06-13-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" title="非线性结构">非线性结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-15T16:00:00.000Z" title="Created 2021-06-16 00:00:00">2021-06-16</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/">非线性结构</a></span></div><div class="content">二叉树、图
+
+树
+基本概念
+
+树描述数据元素之间的层级关系
+
+
+
+双亲、子女、边
+
+边：双亲到子女
+
+
+
+兄弟
+
+具有同一双亲结点
+
+
+
+路径、路径长度
+
+
+结点的层数
+
+根节点的层数为0
+
+
+
+树的深度（高度）
+
+层数最大
+
+
+
+结点的度数、树的度数
+
+结点子女的个数称为该结点的“度数”
+树中度数最大的结点的度数叫做“树的度数“
+
+
+
+树叶、分支结点
+
+
+有序树、无序树
+
+
+森林
+
+m棵互不相交的集合称为森林
+
+
+
+二叉树
+
+结点有左右之分
+
+
+
+第i层，节点数目最多为2^i^
+
+
+深度为k的二叉树至多有2^k+1^ - 1个结点
+
+
+终端结点为n0、度数为2的结点个数为n2， n0 = n2 + 1
+
+
+满二叉树
+
+
+
+深度为k，且有2^k+1^ -1个结点
+
+
+完全二叉树
+
+
+不一定是满二叉树
+
+
+具有n个结点的完全二叉树的深度为[logn]
+
+二叉树的遍历
+
+D 根 L 左子树 R 右子树
+
+
+先序遍历 DLR
+中序遍历 LDR
+后序遍历 LRD
+层次遍历
+
+转换
+
+
+树转二叉树
+
+
+
+森林转二叉树
+
+
+
+二叉树到森林
+
+
+
+哈夫曼树
+基本概念
+
+
+扩充二叉树和带权路径长度
+
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/06/13/2021-06-13-%E4%BA%A4%E9%80%9A%E7%81%AF/" title="交通灯">交通灯</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-12T16:00:00.000Z" title="Created 2021-06-13 00:00:00">2021-06-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hardware/">Hardware</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/MCS-51/">MCS-51</a></span></div><div class="content">结课作业
+
+功能要求
+
+利用定时器中断产生倒计时,用数码显示机动车交通灯每个灯次的倒计时。
+每个路口交通变化顺序为：
+
+机动车用交通灯：
+
+绿灯亮，绿灯闪烁3次，1秒/次
+黄灯闪烁3次,1秒/次,
+红灯亮;
+
+
+行人用交通灯:
+
+绿灯亮,绿灯闪烁3次,1秒/次(与机动车交通灯同步),
+红灯亮(无黄灯闪烁过程),
+绿灯闪烁的同时用蜂鸣器对行人进行提示.
+
+
+
+
+设置三个按键，分别是&quot;设置“、 &quot;增大”、“减小“。
+
+用外部中断对第一次按下“设置“进行响应，东西方向的数码管闪烁显示该方向绿灯时间，再次按下设置,则东西、南北方向的数码管闪烁切换。
+按下增大、减小,则使相应方向的绿灯时间做出调整，并在数码管上显示。 再次按下设置完成调整。
+
+
+绿灯时间范围为10秒~20秒
+
+代码实现
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/06/12/2021-03-06-Docker%E5%90%AF%E5%8A%A8/" title="Docker启动">Docker启动</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-11T16:00:00.000Z" title="Created 2021-06-12 00:00:00">2021-06-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Docker/">Docker</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/redis/">redis</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/MongoDB/">MongoDB</a></span></div><div class="content">来自丁雪峰的Spring全家桶</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/06/08/2021-06-08-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-07T16:00:00.000Z" title="Created 2021-06-08 00:00:00">2021-06-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/">线性结构</a></span></div><div class="content">课程学习内容
+
+基本概念
+逻辑结构
+
+集合结构
+线性结构
+树形结构
+图形结构
+
+
+储存结构
+顺序结构
+
+优点
+
+储存密度高
+随机、快速访问
+
+
+缺点
+
+插入/删除，引起大量元素移动
+预分配
+
+
+
+链接方式
+
+指针域+数据域
+
+
+优点
+
+逻辑关系由指针域指出，不会引起大量元素移动
+动态变化
+
+
+缺点
+
+无法实现随机访问
+指针域占用一定空间
+
+
+
+索引方式
+
+优点
+
+检索快
+
+
+缺点
+
+索引占用较多空间
+
+
+
+散列方式
+
+关键字、哈希表
+
+
+优点
+
+检索、增加、删除快
+
+
+缺点
+
+散列函数拉垮的话，储存单元冲突的话，会增加额外的时间和空间的开销
+
+
+
+算法
+基本特征
+
+有穷性
+确定性
+可行性
+输入
+输出
+
+评价标准
+
+时间复杂度
+空间复杂度
+
+线性表
+#include&lt;iostream&gt;
+#include&lt;fstream&gt;
+
+using namespace std;
+
+class SeqList
+&#123;
+    private:
+        int Maxsize;
+        int length;
+        char * element;
+  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/05/26/2021-05-26-Inherit%20the%20Stars/" title="Inherit the Stars">Inherit the Stars</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-05-25T16:00:00.000Z" title="Created 2021-05-26 00:00:00">2021-05-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Essays/">Essays</a></span></div><div class="content">下周听说课，有任务安排，主题随意，正好今天下午拜读了《星之继承者》
+​	
+​	Today I want to introduce a book to you: “Inherit the Stars”.
+​	This is a story about human beings marching towards the unknown.
+​	The story is developed following the scientific research started after the discovery of Charlie, as the ancient human found on the Moon gets nicknamed. It’s a story of archeological mysteries and the attempt of the scientists who study them to find answers based on information that appears increasingly contradicting.
+​	The resea ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AmorFati</div><div class="author-info__description">A Fresh MAn</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">39</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/AmorFati-coder"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/AmorFati-coder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/A629723354243@hotmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">摸鱼中...</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/demo/" title="demo">demo</a><time datetime="2021-10-28T10:42:34.000Z" title="Created 2021-10-28 18:42:34">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/hello-world/" title="Hello World">Hello World</a><time datetime="2021-10-28T02:42:41.696Z" title="Created 2021-10-28 10:42:41">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/2021-10-28-Ubuntu_remake/" title="Ubuntu美化过程">Ubuntu美化过程</a><time datetime="2021-10-27T16:00:00.000Z" title="Created 2021-10-28 00:00:00">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/27/2021-10-27-Ubuntu-%E7%A3%81%E7%9B%98%E6%8B%93%E5%B1%95/" title="Ubuntu 磁盘拓展">Ubuntu 磁盘拓展</a><time datetime="2021-10-26T16:00:00.000Z" title="Created 2021-10-27 00:00:00">2021-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/16/2021-09-16-SpringBoot%E4%B8%AD%E7%9A%84AOP/" title="SpringBoot中的AOP">SpringBoot中的AOP</a><time datetime="2021-09-15T16:00:00.000Z" title="Created 2021-09-16 00:00:00">2021-09-16</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="More">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C++</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Debug/"><span class="card-category-list-name">Debug</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Docker/"><span class="card-category-list-name">Docker</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Essays/"><span class="card-category-list-name">Essays</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hardware/"><span class="card-category-list-name">Hardware</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Harmony/"><span class="card-category-list-name">Harmony</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Jetbrain/"><span class="card-category-list-name">Jetbrain</span><span class="card-category-list-count">2</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/AOP/" style="font-size: 1.3em; color: #99a1ac">AOP</a> <a href="/tags/Bean/" style="font-size: 1.1em; color: #999">Bean</a> <a href="/tags/CTF/" style="font-size: 1.3em; color: #99a1ac">CTF</a> <a href="/tags/DataSourse/" style="font-size: 1.1em; color: #999">DataSourse</a> <a href="/tags/HATEOAS/" style="font-size: 1.1em; color: #999">HATEOAS</a> <a href="/tags/HiSpark/" style="font-size: 1.1em; color: #999">HiSpark</a> <a href="/tags/JPA/" style="font-size: 1.1em; color: #999">JPA</a> <a href="/tags/MCS-51/" style="font-size: 1.3em; color: #99a1ac">MCS-51</a> <a href="/tags/MVC/" style="font-size: 1.3em; color: #99a1ac">MVC</a> <a href="/tags/Modifiers/" style="font-size: 1.1em; color: #999">Modifiers</a> <a href="/tags/MongoDB/" style="font-size: 1.1em; color: #999">MongoDB</a> <a href="/tags/MyBatis/" style="font-size: 1.3em; color: #99a1ac">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Newsflow/" style="font-size: 1.1em; color: #999">Newsflow</a> <a href="/tags/Practical-Activity/" style="font-size: 1.1em; color: #999">Practical Activity</a> <a href="/tags/RSS/" style="font-size: 1.1em; color: #999">RSS</a> <a href="/tags/RestTemplate/" style="font-size: 1.1em; color: #999">RestTemplate</a> <a href="/tags/TJU/" style="font-size: 1.3em; color: #99a1ac">TJU</a> <a href="/tags/Ubuntu/" style="font-size: 1.1em; color: #999">Ubuntu</a> <a href="/tags/VMware/" style="font-size: 1.1em; color: #999">VMware</a> <a href="/tags/blog/" style="font-size: 1.1em; color: #999">blog</a> <a href="/tags/book/" style="font-size: 1.1em; color: #999">book</a> <a href="/tags/cache/" style="font-size: 1.1em; color: #999">cache</a> <a href="/tags/disk/" style="font-size: 1.5em; color: #99a9bf">disk</a> <a href="/tags/file-system/" style="font-size: 1.1em; color: #999">file system</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/http/" style="font-size: 1.1em; color: #999">http</a> <a href="/tags/idea/" style="font-size: 1.3em; color: #99a1ac">idea</a> <a href="/tags/movie/" style="font-size: 1.1em; color: #999">movie</a> <a href="/tags/pointer-structure/" style="font-size: 1.1em; color: #999">pointer&structure</a> <a href="/tags/redis/" style="font-size: 1.1em; color: #999">redis</a> <a href="/tags/requests/" style="font-size: 1.1em; color: #999">requests</a> <a href="/tags/static-resource-cache/" style="font-size: 1.1em; color: #999">static resource&&cache</a> <a href="/tags/urllib/" style="font-size: 1.1em; color: #999">urllib</a> <a href="/tags/yaml/" style="font-size: 1.1em; color: #999">yaml</a> <a href="/tags/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90/" style="font-size: 1.1em; color: #999">电工电子</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">线性结构</a> <a href="/tags/%E9%9B%86%E5%90%88/" style="font-size: 1.1em; color: #999">集合</a> <a href="/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">非线性结构</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">October 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">September 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">August 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">July 2021</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">June 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">April 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">March 2021</span><span class="card-archive-list-count">17</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">48</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-10-27T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-10-28T10:59:13.421Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/back_love.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 By AmorFati</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一丝还袅博山云</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "···躺平···".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '···躺平···'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[image]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[link]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[code]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const findTrueUrl = (array) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
+        generateHtml(array)
+    });
+  }
+
+  const getComment = () => {
+    fetch('https://api.github.com/repos/AmorFati-coder/AmorFati-coder.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at,
+            'githubUrl': item.html_url
+          }
+        })
+        findTrueUrl(githubArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "Unable to get the data, please make sure the settings are correct."
+      })
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += 'No Comment'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('github-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

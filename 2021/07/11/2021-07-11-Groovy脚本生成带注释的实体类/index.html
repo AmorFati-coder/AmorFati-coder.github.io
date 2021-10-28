@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Groovy脚本生成带注释的实体类 | AmorFati's Blog</title><meta name="keywords" content="idea"><meta name="author" content="AmorFati"><meta name="copyright" content="AmorFati"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="出处忘了，之前自己编过一个，后来申请教育资格的时候，把原来的脚本忘了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Groovy脚本生成带注释的实体类">
+<meta property="og:url" content="http://amorfati-coder.github.io/2021/07/11/2021-07-11-Groovy%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%B8%A6%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%9E%E4%BD%93%E7%B1%BB/index.html">
+<meta property="og:site_name" content="AmorFati&#39;s Blog">
+<meta property="og:description" content="出处忘了，之前自己编过一个，后来申请教育资格的时候，把原来的脚本忘了">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://amorfati-coder.github.io/img/back_once.png">
+<meta property="article:published_time" content="2021-07-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-10T18:30:41.432Z">
+<meta property="article:author" content="AmorFati">
+<meta property="article:tag" content="idea">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://amorfati-coder.github.io/img/back_once.png"><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="http://amorfati-coder.github.io/2021/07/11/2021-07-11-Groovy%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%B8%A6%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%9E%E4%BD%93%E7%B1%BB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: AmorFati","link":"Link: ","source":"Source: AmorFati's Blog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Groovy脚本生成带注释的实体类',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-11 02:30:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/back_once.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AmorFati's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Groovy脚本生成带注释的实体类</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-07-10T16:00:00.000Z" title="Created 2021-07-11 00:00:00">2021-07-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-07-10T18:30:41.432Z" title="Updated 2021-07-11 02:30:41">2021-07-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Jetbrain/">Jetbrain</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Groovy脚本生成带注释的实体类"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><center>出处忘了，之前自己编过一个，后来申请教育资格的时候，把原来的脚本忘了</center>
+<span id="more"></span>
+<p>大驼峰、小驼峰 loombock</p>
+<pre class="line-numbers language-groovy" data-language="groovy"><code class="language-groovy"><span class="token keyword">import</span> com<span class="token punctuation">.</span>intellij<span class="token punctuation">.</span>database<span class="token punctuation">.</span>model<span class="token punctuation">.</span>DasTable
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>intellij<span class="token punctuation">.</span>database<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Case
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>intellij<span class="token punctuation">.</span>database<span class="token punctuation">.</span>util<span class="token punctuation">.</span>DasUtil
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>text<span class="token punctuation">.</span>SimpleDateFormat
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>intellij<span class="token punctuation">.</span>database<span class="token punctuation">.</span>model<span class="token punctuation">.</span>ObjectKind
+
+<span class="token comment">/*
+ * Available context bindings:
+ *   SELECTION   Iterable&lt;DasObject>
+ *   PROJECT     project
+ *   FILES       files helper
+ */</span>
+
+packageName <span class="token operator">=</span> <span class="token string gstring">"com.sample;"</span>
+<span class="token comment">//优先级</span>
+typeMapping <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)tinyint/</span><span class="token punctuation">)</span>                         <span class="token punctuation">:</span> <span class="token string gstring">"byte"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)int/</span><span class="token punctuation">)</span>                             <span class="token punctuation">:</span> <span class="token string gstring">"Integer"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)bool|bit/</span><span class="token punctuation">)</span>                        <span class="token punctuation">:</span> <span class="token string gstring">"Boolean"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)float|double|decimal|real/</span><span class="token punctuation">)</span>       <span class="token punctuation">:</span> <span class="token string gstring">"Double"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)timestamp/</span><span class="token punctuation">)</span>                       <span class="token punctuation">:</span> <span class="token string gstring">"Timestamp"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token operator">~</span><span class="token string regex">/(?i)/</span><span class="token punctuation">)</span>                                <span class="token punctuation">:</span> <span class="token string gstring">"String"</span>
+<span class="token punctuation">]</span>
+
+FILES<span class="token punctuation">.</span><span class="token function">chooseDirectoryAndSave</span><span class="token punctuation">(</span><span class="token string gstring">"Choose directory"</span><span class="token punctuation">,</span> <span class="token string gstring">"Choose where to store generated files"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> dir <span class="token operator">-></span>
+    SELECTION<span class="token punctuation">.</span>filter <span class="token punctuation">&#123;</span> it <span class="token keyword">instanceof</span> <span class="token class-name">DasTable</span> <span class="token punctuation">&#125;</span><span class="token punctuation">.</span>each <span class="token punctuation">&#123;</span> <span class="token function">generate</span><span class="token punctuation">(</span>it<span class="token punctuation">,</span> dir<span class="token punctuation">)</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">def</span> <span class="token function">generate</span><span class="token punctuation">(</span>table<span class="token punctuation">,</span> dir<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">def</span> className <span class="token operator">=</span> <span class="token function">javaName</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> fields <span class="token operator">=</span> <span class="token function">calcFields</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span>
+    packageName <span class="token operator">=</span> <span class="token function">getPackageName</span><span class="token punctuation">(</span>dir<span class="token punctuation">)</span>
+    <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>dir<span class="token punctuation">,</span> className <span class="token operator">+</span> <span class="token string gstring">".java"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">withPrintWriter</span><span class="token punctuation">(</span><span class="token string gstring">"utf-8"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> out <span class="token operator">-></span> <span class="token function">generate</span><span class="token punctuation">(</span>out<span class="token punctuation">,</span> className<span class="token punctuation">,</span> fields<span class="token punctuation">,</span> table<span class="token punctuation">)</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 获取包所在文件夹路径</span>
+<span class="token keyword">def</span> <span class="token function">getPackageName</span><span class="token punctuation">(</span>dir<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> dir<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string gstring">"\\\\"</span><span class="token punctuation">,</span> <span class="token string gstring">"."</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string gstring">"/"</span><span class="token punctuation">,</span> <span class="token string gstring">"."</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string gstring">"^.*src(\\.main\\.java\\.)?"</span><span class="token punctuation">,</span> <span class="token string gstring">""</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string gstring">";"</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">def</span> <span class="token function">generate</span><span class="token punctuation">(</span>out<span class="token punctuation">,</span> className<span class="token punctuation">,</span> fields<span class="token punctuation">,</span> table<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"package <span class="token expression"><span class="token punctuation">$</span>packageName</span>"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">""</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"import lombok.AllArgsConstructor;"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"import lombok.Data;"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"import lombok.NoArgsConstructor;"</span>
+
+
+    Set types <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    fields<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        types<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>type<span class="token punctuation">)</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>types<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string gstring">"Timestamp"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        out<span class="token punctuation">.</span>println <span class="token string gstring">""</span>
+        out<span class="token punctuation">.</span>println <span class="token string gstring">"import java.sql.Timestamp;"</span>
+    <span class="token punctuation">&#125;</span>
+
+    out<span class="token punctuation">.</span>println <span class="token string gstring">""</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"/**"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">" * @author amorfati on "</span> <span class="token operator">+</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string gstring">"yyyy/MM/dd"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span><span class="token string gstring">"."</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">" */"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"@Data"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"@AllArgsConstructor"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"@NoArgsConstructor"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"public class <span class="token expression"><span class="token punctuation">$</span>className</span> &#123;"</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">""</span>
+    fields<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 输出注释</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isNotEmpty</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span>commoent<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            out<span class="token punctuation">.</span>println <span class="token string gstring">"\t/**"</span>
+            out<span class="token punctuation">.</span>println <span class="token string gstring">" \t* <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">&#123;</span>it<span class="token punctuation">.</span>commoent<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span>"</span>
+            out<span class="token punctuation">.</span>println <span class="token string gstring">" \t*/"</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>it<span class="token punctuation">.</span>annos <span class="token operator">!=</span> <span class="token string gstring">""</span><span class="token punctuation">)</span> out<span class="token punctuation">.</span>println <span class="token string gstring">"  <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">&#123;</span>it<span class="token punctuation">.</span>annos<span class="token punctuation">&#125;</span></span>"</span>
+        out<span class="token punctuation">.</span>println <span class="token string gstring">"\tprivate <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">&#123;</span>it<span class="token punctuation">.</span>type<span class="token punctuation">&#125;</span></span> <span class="token expression"><span class="token punctuation">$</span><span class="token punctuation">&#123;</span>it<span class="token punctuation">.</span>name<span class="token punctuation">&#125;</span></span>;"</span>
+    <span class="token punctuation">&#125;</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">""</span>
+    out<span class="token punctuation">.</span>println <span class="token string gstring">"&#125;"</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">def</span> <span class="token function">isNotEmpty</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> content <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">def</span> <span class="token function">calcFields</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    DasUtil<span class="token punctuation">.</span><span class="token function">getColumns</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> fields<span class="token punctuation">,</span> col <span class="token operator">-></span>
+        <span class="token keyword">def</span> spec <span class="token operator">=</span> Case<span class="token punctuation">.</span>LOWER<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>col<span class="token punctuation">.</span><span class="token function">getDataType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSpecification</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> typeStr <span class="token operator">=</span> typeMapping<span class="token punctuation">.</span>find <span class="token punctuation">&#123;</span> p<span class="token punctuation">,</span> t <span class="token operator">-></span> p<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>spec<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span><span class="token punctuation">.</span>value
+
+        <span class="token keyword">def</span> comm <span class="token operator">=</span> <span class="token punctuation">[</span>
+                colName <span class="token punctuation">:</span> col<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                name    <span class="token punctuation">:</span> <span class="token function">javaName</span><span class="token punctuation">(</span>col<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                type    <span class="token punctuation">:</span> typeStr<span class="token punctuation">,</span>
+                commoent<span class="token punctuation">:</span> col<span class="token punctuation">.</span><span class="token function">getComment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                annos   <span class="token punctuation">:</span> <span class="token string gstring">""</span>
+        <span class="token punctuation">]</span>
+        fields <span class="token operator">+=</span> <span class="token punctuation">[</span>comm<span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">def</span> <span class="token function">javaName</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> capitalize<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">def</span> s <span class="token operator">=</span> com<span class="token punctuation">.</span>intellij<span class="token punctuation">.</span>psi<span class="token punctuation">.</span>codeStyle<span class="token punctuation">.</span>NameUtil<span class="token punctuation">.</span><span class="token function">splitNameIntoWords</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span>collect <span class="token punctuation">&#123;</span> Case<span class="token punctuation">.</span>LOWER<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">capitalize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string gstring">""</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string regex">/[^\p&#123;javaJavaIdentifierPart&#125;[_]]/</span><span class="token punctuation">,</span> <span class="token string gstring">"_"</span><span class="token punctuation">)</span>
+    capitalize <span class="token operator">||</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token operator">?</span> s <span class="token punctuation">:</span> Case<span class="token punctuation">.</span>LOWER<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> s<span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">..</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">AmorFati</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://amorfati-coder.github.io/2021/07/11/2021-07-11-Groovy%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%B8%A6%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%9E%E4%BD%93%E7%B1%BB/">http://amorfati-coder.github.io/2021/07/11/2021-07-11-Groovy%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E5%B8%A6%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%9E%E4%BD%93%E7%B1%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/idea/">idea</a></div><div class="post_share"><div class="social-share" data-image="/img/back_once.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/07/11/2021-05-02-%E5%BD%B1%E5%8D%95%E8%AE%B0%E5%BD%95/"><img class="prev-cover" src="/img/back_once.png" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">影视记录</div></div></a></div><div class="next-post pull-right"><a href="/2021/07/11/2021-07-11-%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF/"><img class="next-cover" src="/img/back_once.png" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">注释模板</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/07/11/2021-07-11-%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF/" title="注释模板"><img class="cover" src="/img/back_once.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-11</div><div class="title">注释模板</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AmorFati</div><div class="author-info__description">A Fresh MAn</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">39</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/AmorFati-coder"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/AmorFati-coder" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/A629723354243@hotmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">摸鱼中...</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/demo/" title="demo">demo</a><time datetime="2021-10-28T10:42:34.000Z" title="Created 2021-10-28 18:42:34">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/hello-world/" title="Hello World">Hello World</a><time datetime="2021-10-28T02:42:41.696Z" title="Created 2021-10-28 10:42:41">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/28/2021-10-28-Ubuntu_remake/" title="Ubuntu美化过程">Ubuntu美化过程</a><time datetime="2021-10-27T16:00:00.000Z" title="Created 2021-10-28 00:00:00">2021-10-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/27/2021-10-27-Ubuntu-%E7%A3%81%E7%9B%98%E6%8B%93%E5%B1%95/" title="Ubuntu 磁盘拓展">Ubuntu 磁盘拓展</a><time datetime="2021-10-26T16:00:00.000Z" title="Created 2021-10-27 00:00:00">2021-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/16/2021-09-16-SpringBoot%E4%B8%AD%E7%9A%84AOP/" title="SpringBoot中的AOP">SpringBoot中的AOP</a><time datetime="2021-09-15T16:00:00.000Z" title="Created 2021-09-16 00:00:00">2021-09-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/back_once.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 By AmorFati</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一丝还袅博山云</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '4484c1e4c8f98342b0d3',
+      clientSecret: 'c060858cb30720f8e48ee3cdea97f023c77eb90d',
+      repo: 'AmorFati-coder.github.io',
+      owner: 'AmorFati-coder',
+      admin: ['AmorFati-coder'],
+      id: 'a3380f0115f47847790eed9e9d3d07d7',
+      language: 'en',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

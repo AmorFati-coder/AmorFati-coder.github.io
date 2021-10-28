@@ -1,0 +1,486 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>磁盘分区与文件系统 | AmorFati's Blog</title><meta name="keywords" content="disk,file system"><meta name="author" content="AmorFati"><meta name="copyright" content="AmorFati"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="磁盘分区  分区只是针对64Bytes的分区表进行设置  为什么分区  安全性（考虑重装window是C盘的情况） 提高读取性能  Linux下磁盘分区的重要性   mount（挂载） 目录树的结构与磁盘内的数据对应   分区方法   目录配置 FHS标准     可分享的(shareable) 不可分享的(unshareable)     不变的(static) &#x2F;usr(软件放置处) &#x2F;etc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磁盘分区与文件系统">
+<meta property="og:url" content="http://amorfati-coder.github.io/2021/04/20/2021-04-20-%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="AmorFati&#39;s Blog">
+<meta property="og:description" content="磁盘分区  分区只是针对64Bytes的分区表进行设置  为什么分区  安全性（考虑重装window是C盘的情况） 提高读取性能  Linux下磁盘分区的重要性   mount（挂载） 目录树的结构与磁盘内的数据对应   分区方法   目录配置 FHS标准     可分享的(shareable) 不可分享的(unshareable)     不变的(static) &#x2F;usr(软件放置处) &#x2F;etc">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://amorfati-coder.github.io/img/back_once.png">
+<meta property="article:published_time" content="2021-04-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-20T13:59:41.147Z">
+<meta property="article:author" content="AmorFati">
+<meta property="article:tag" content="disk">
+<meta property="article:tag" content="file system">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://amorfati-coder.github.io/img/back_once.png"><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="http://amorfati-coder.github.io/2021/04/20/2021-04-20-%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: AmorFati","link":"Link: ","source":"Source: AmorFati's Blog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '磁盘分区与文件系统',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-20 21:59:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/back_once.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AmorFati's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">磁盘分区与文件系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-19T16:00:00.000Z" title="Created 2021-04-20 00:00:00">2021-04-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-04-20T13:59:41.147Z" title="Updated 2021-04-20 21:59:41">2021-04-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="磁盘分区与文件系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="磁盘分区">磁盘分区</h2>
+<ul>
+<li>分区只是针对64Bytes的分区表进行设置</li>
+</ul>
+<h3 id="为什么分区">为什么分区</h3>
+<ul>
+<li>安全性（考虑重装window是C盘的情况）</li>
+<li>提高读取性能</li>
+</ul>
+<h3 id="Linux下磁盘分区的重要性">Linux下磁盘分区的重要性</h3>
+<ul>
+<li>
+<p>mount（挂载）</p>
+<p>目录树的结构与磁盘内的数据对应</p>
+</li>
+<li>
+<p>分区方法</p>
+</li>
+</ul>
+<h2 id="目录配置">目录配置</h2>
+<h3 id="FHS标准">FHS标准</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>可分享的(shareable)</th>
+<th>不可分享的(unshareable)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不变的(static)</td>
+<td>/usr(软件放置处)</td>
+<td>/etc(配置文件)</td>
+</tr>
+<tr>
+<td>/opt(第三方协力软件)</td>
+<td>/boot(开机与核心档)</td>
+<td></td>
+</tr>
+<tr>
+<td>可变动的(variable)</td>
+<td>/var/mail(使用者邮件信息)</td>
+<td>/var/run（程序相关）</td>
+</tr>
+<tr>
+<td>/var/spool/news（新闻群组）</td>
+<td>/var/lock(程序相关)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre class="line-numbers language-xml-dtd" data-language="xml-dtd"><code class="language-xml-dtd">root@youname-PC:&#x2F;mnt&#x2F;hgfs# tree &#x2F; -L 1
+&#x2F;
+├── bin -&gt; usr&#x2F;bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib -&gt; usr&#x2F;lib
+├── lib32 -&gt; usr&#x2F;lib32
+├── lib64 -&gt; usr&#x2F;lib64
+├── libx32 -&gt; usr&#x2F;libx32
+├── lost+found
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -&gt; usr&#x2F;sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+└── var<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>
+<p>在FHS标注下只有三个目录应该放置什么数据</p>
+<ul>
+<li>/(root)</li>
+<li>/usr(unix software resource)</li>
+<li>/var(variable)/</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他目录">其他目录</h3>
+<h4 id="bin">/bin</h4>
+<blockquote>
+<p>系统有很多放置可执行文件的目录，但/bin比较特殊。因为/bin放置的是在==单人维护模式下还能够被操作==的指令。 在/bin下面的指令可以被root与一般 帐号所使用，主要有：cat, chmod, chown, date, mv, mkdir, cp, bash等等常 用的指令。</p>
+</blockquote>
+<h4 id="boot">\boot</h4>
+<pre><code>&gt; 这个目录主要在放置==开机==会使用到的文件，包括Linux核心文件以及开机菜 单与开机所需配置文件等等。 Linux kernel常用的文件名为：vmlinuz，如果 使用的是grub2这个开机管理程序， 则还会存在/boot/grub2/
+</code></pre>
+<h4 id="dev">/dev</h4>
+<blockquote>
+<p>在Linux系统上，任何设备与周边设备都是以文件的型态存在于这个目录当 中的。 你只要通过存取这个目录下面的某个文件，就等于存取某个设备. 比较重要的文件有/dev/null, /dev/zero, /dev/tty, /dev/loop, /dev/sd</p>
+</blockquote>
+<h4 id="etc">/etc</h4>
+<blockquote>
+<p>系统主要的==配置文件==几乎都放置在这个目录内，例如人员的帐号密码档、 各种服务的启始档等等。一般来说，这个目录下的各文件属性是可以让一般 使用者查阅的， 但是只有root有权力修改。FHS建议不要放置可可执行文件 （binary）在这个目录中喔。比较重要的文件有： /etc/modprobe.d/, /etc/passwd, /etc/fstab, /etc/issue 等等。另外 FHS 还规范几个重要的目录 最好要存在 /etc/ 目录下：/etc/opt（必要）：这个目录在放置第三方协力 软件 /opt 的相关配置文件 /etc/X11/（建议）：与 X Window 有关的各种配 置文件都在这里，尤其是 xorg.conf 这个 X Server 的配置文件。 /etc/sgml/ （建议）：与 SGML 格式有关的各项配置文件 /etc/xml/（建议）：与 XML 格式有关的各项配置文件</p>
+</blockquote>
+<h4 id="lib">/lib</h4>
+<blockquote>
+<p>系统的函数库非常的多，而/lib放置的则是==在开机时会用到的函数库==， 以及 在/bin或/sbin下面的指令会调用的函数库而已。 什么是函数库呢？你可以将 他想成是“外挂”，某些指令必须要有这些“外挂”才能够顺利完成程序的执行 之意。 另外 FSH 还要求下面的目录必须要存在：==/lib/modules/==：这个目录 主要放置可抽换式的核心相关模块（驱动程序）</p>
+</blockquote>
+<h4 id="media">/media</h4>
+<blockquote>
+<p>media是“媒体”的英文，顾名思义，这个/media下面放置的就是==可移除的设备==。 包括软盘、光盘、DVD等等设备都暂时挂载于此。常见的文件名 有：/media/floppy, /media/cdrom等等。</p>
+</blockquote>
+<h4 id="mnt">/mnt</h4>
+<blockquote>
+<p>如果你想要==暂时挂载==某些额外的设备，一般建议你可以放置到这个目录中。 在远古时期，这个目录的用途与/media相同。只是有了/media之后，这个目录就用来暂时挂载用了。</p>
+</blockquote>
+<h4 id="opt">/opt</h4>
+<blockquote>
+<p>这个是给==第三方协力软件==放置的目录。举例来说，KDE这个桌面管理系统是一个独立的计划，不过他可以安装到Linux系 统中，因此KDE的软件就建议放置到此目录下了。 另外，如果你想要自行安装额外的软件（非原本的distribution提供的），那么也能够将你的软件安 装到这里来。 不过，以前的Linux系统中，我们还是习惯放置在/usr/local目录。</p>
+</blockquote>
+<h4 id="run">/run</h4>
+<blockquote>
+<p>早期的 FHS 规定系统开机后所产生的各项信息应该要放置到 /var/run 目录 下，新版的 FHS 则规范到 /run 下面。</p>
+</blockquote>
+<h4 id="sbin-usr-sbin">/sbin -&gt; usr/sbin</h4>
+<blockquote>
+<p>里面包括了==开机、修复、还原系统==所需要的指令。 至于某些==服务器软件程序==，一般则放置到/usr/sbin/当中。至于本机自行安装的软件所产生的系统可执行文件（system binary）， 则放置到/usr/local/sbin/ 当中了。常见的指令包括：fdisk, fsck, ifconfig, mkfs等等。</p>
+</blockquote>
+<h4 id="srv">/srv</h4>
+<blockquote>
+<p>srv可以视为“service”的缩写，是一些网络服务启动之后，==这些服务所需要 取用的数据目录==。 常见的服务例如WWW, FTP等等。举例来说，WWW服 务器需要的网页数据就可以放置在/srv/www/里面。 不过，系统的服务数据 如果尚未要提供给网际网络任何人浏览的话，默认还是建议放置到 /var/lib 下面即可</p>
+</blockquote>
+<h4 id="tmp">/tmp</h4>
+<blockquote>
+<p>这是让一般==使用者或者是正在执行的程序暂时放置文件==的地方。 这个目录 是任何人都能够存取的，所以你需要定期的清理一下。当然，重要数据不可 放置在此目录啊！ 因为FHS甚至建议在开机时，应该要将/tmp下的数据都删除</p>
+</blockquote>
+<h4 id="usr">/usr</h4>
+<ul>
+<li>
+<p>默认软件全在这里</p>
+</li>
+<li>
+<p>/bin</p>
+</li>
+</ul>
+<blockquote>
+<p>所有一般用户能够使用的指令都放在这里！目前新的 CentOS 7 已经将 全部的使用者指令放置于此，而使用链接文件的方式将 /bin 链接至此！ 也就是说， /usr/bin 与 /bin 是一模一样</p>
+</blockquote>
+<ul>
+<li>
+<p>/lib</p>
+</li>
+<li>
+<p>/local</p>
+</li>
+</ul>
+<blockquote>
+<p>系统管理员在==本机自行安装自己下载的软件==（非distribution默认提供 者），建议安装到此目录， 这样会比较便于管理。举例来说，你的 distribution提供的软件较旧，你想安装较新的软件但又不想移除旧版， 此时你可以将新版软件安装于/usr/local/目录下</p>
+</blockquote>
+<ul>
+<li>
+<p>/sbin</p>
+</li>
+<li>
+<p>/share</p>
+</li>
+</ul>
+<blockquote>
+<p>主要放置==只读架构的数据文件==，当然也包括==共享文件==。在这个目录下放 置的数据几乎是不分硬件架构均可读取的数据， 因为几乎都是文字文 件嘛！在此目录下常见的还有这些次目录：/usr/share/man：线上说明 文档 /usr/share/doc：软件杂项的文件说明 /usr/share/zoneinfo：与时 区有关的时区文件</p>
+</blockquote>
+<ul>
+<li>
+<p>/game</p>
+</li>
+<li>
+<p>/include</p>
+</li>
+</ul>
+<blockquote>
+<p>c/c++等程序语言的文件开始（header）与包含档（include）放置处， 当我们以tarball方式 （*.tar.gz 的方式安装软件）安装某些数据时，会 使用到里头的许多包</p>
+</blockquote>
+<ul>
+<li>/src</li>
+</ul>
+<blockquote>
+<p>一般源代码建议放置到这里，src有source的意思。至于核心源代码则 建议放置到/usr/src/linux/目录</p>
+</blockquote>
+<h4 id="var">/var</h4>
+<ul>
+<li>/lib</li>
+</ul>
+<blockquote>
+<p>程序本身执行的过程中，需要使用到的数据文件放置的目录。在此目录下 各自的软件应该要有各自的目录。 举例来说，MySQL的数据库放置 到/var/lib/mysql/而rpm的数据库则放到/var/lib/rpm</p>
+</blockquote>
+<ul>
+<li>
+<p>/lock</p>
+</li>
+<li>
+<p>/log</p>
+</li>
+</ul>
+<blockquote>
+<p>登录文件放置位置</p>
+</blockquote>
+<ul>
+<li>/spool</li>
+</ul>
+<h4 id="home">/home</h4>
+<blockquote>
+<p>使用者文件夹</p>
+</blockquote>
+<ul>
+<li>/proc</li>
+</ul>
+<blockquote>
+<p>个目录本身是一个“虚拟文件系统（virtual filesystem）”.他放置的数 据都是在内存当中， 例如系统核心、行程信息（process）、周边设备的 状态及网络状态等等。因为这个目录下的数据都是在内存当中， 所以本身 不占任何硬盘空间啊！比较重要的文件例如：/proc/cpuinfo, /proc/dma, /proc/interrupts, /proc/ioports, /proc/net/* 等等。</p>
+</blockquote>
+<ul>
+<li>/sys</li>
+</ul>
+<blockquote>
+<p>这个目录其实跟/proc非常类似，也是一个虚拟的文件系统，主要也是记录 核心与系统硬件信息较相关的信息。 包括目前已载入的核心模块与核心侦 测到的硬件设备信息等等。这个目录同样不占硬盘容量</p>
+</blockquote>
+<h2 id="文件系统">文件系统</h2>
+<h3 id="磁盘与容量">磁盘与容量</h3>
+<ul>
+<li><code>df:列出文件系统的整体磁盘使用量</code></li>
+</ul>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">用法：df [选项]... [文件]...
+  -a, --all             include pseudo, duplicate, inaccessible file systems
+  -B, --block-size&#x3D;SIZE  scale sizes by SIZE before printing them; e.g.,
+                           &#39;-BM&#39; prints sizes in units of 1,048,576 bytes;
+                           see SIZE format below
+  -h, --human-readable  print sizes in powers of 1024 (e.g., 1023M)
+  -H, --si              print sizes in powers of 1000 (e.g., 1.1G)
+  -i, --inodes          显示inode 信息而非块使用量
+  -k                    即--block-size&#x3D;1K
+  -l, --local           只显示本机的文件系统
+      --no-sync         取得使用量数据前不进行同步动作(默认)
+      --output[&#x3D;FIELD_LIST]  use the output format defined by FIELD_LIST,
+                               or print all fields if FIELD_LIST is omitted.
+  -P, --portability     use the POSIX output format
+      --sync            invoke sync before getting usage info
+      --total           elide all entries insignificant to available space,
+                          and produce a grand total
+  -t, --type&#x3D;TYPE       limit listing to file systems of type TYPE
+  -T, --print-type      print file system type
+  -x, --exclude-type&#x3D;TYPE   limit listing to file systems not of type TYPE
+  -v                    (ignored)
+      --help            显示此帮助信息并退出
+      --version         显示版本信息并退出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>
+<p><code>du: 评估文件系统的磁盘使用量</code></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">用法：du [选项]... [文件]...
+　或：du [选项]... --files0-from&#x3D;F
+Summarize disk usage of the set of FILEs, recursively for directories.
+
+  -a, --all             列出所有的文件与目录容量,因为默认仅统计目录下面的文件量
+      --apparent-size   print apparent sizes, rather than disk usage; although
+                          the apparent size is usually smaller, it may be
+                          larger due to holes in (&#39;sparse&#39;) files, internal
+                          fragmentation, indirect blocks, and the like
+  -H                    equivalent to --dereference-args (-D)
+  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M 2G)
+      --inodes          list inode usage information instead of block usage
+  -S, --separate-dirs   不包含子目录
+      --si              like -h, but use powers of 1000 not 1024
+  -s, --summarize       display only a total for each argument
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">AmorFati</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://amorfati-coder.github.io/2021/04/20/2021-04-20-%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">http://amorfati-coder.github.io/2021/04/20/2021-04-20-%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/disk/">disk</a><a class="post-meta__tags" href="/tags/file-system/">file system</a></div><div class="post_share"><div class="social-share" data-image="/img/back_once.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/21/2021-04-21-VMware%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5/"><img class="prev-cover" src="/img/back_once.png" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">VMware网络连接</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/04/2021-04-04-%E6%8C%87%E9%92%88%E7%B1%BB%E5%9E%8B/"><img class="next-cover" src="/img/back_once.png" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">指针类型</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/04/21/2021-04-21-VMware%E4%B8%8Bdeepin%E7%9A%84%E7%A3%81%E7%9B%98%E6%8B%93%E5%B1%95/" title="VMware下deepin的磁盘拓展"><img class="cover" src="/img/back_once.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-21</div><div class="title">VMware下deepin的磁盘拓展</div></div></a></div><div><a href="/2021/10/27/2021-10-27-Ubuntu-%E7%A3%81%E7%9B%98%E6%8B%93%E5%B1%95/" title="Ubuntu 磁盘拓展"><img class="cover" src="/img/back_once.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-27</div><div class="title">Ubuntu 磁盘拓展</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="toc-number">1.</span> <span class="toc-text">磁盘分区</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%88%86%E5%8C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">为什么分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E4%B8%8B%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">Linux下磁盘分区的重要性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">目录配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#FHS%E6%A0%87%E5%87%86"><span class="toc-number">2.1.</span> <span class="toc-text">FHS标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9B%AE%E5%BD%95"><span class="toc-number">2.2.</span> <span class="toc-text">其他目录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bin"><span class="toc-number">2.2.1.</span> <span class="toc-text">&#x2F;bin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#boot"><span class="toc-number">2.2.2.</span> <span class="toc-text">\boot</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dev"><span class="toc-number">2.2.3.</span> <span class="toc-text">&#x2F;dev</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#etc"><span class="toc-number">2.2.4.</span> <span class="toc-text">&#x2F;etc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#lib"><span class="toc-number">2.2.5.</span> <span class="toc-text">&#x2F;lib</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#media"><span class="toc-number">2.2.6.</span> <span class="toc-text">&#x2F;media</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mnt"><span class="toc-number">2.2.7.</span> <span class="toc-text">&#x2F;mnt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#opt"><span class="toc-number">2.2.8.</span> <span class="toc-text">&#x2F;opt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#run"><span class="toc-number">2.2.9.</span> <span class="toc-text">&#x2F;run</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sbin-usr-sbin"><span class="toc-number">2.2.10.</span> <span class="toc-text">&#x2F;sbin -&gt; usr&#x2F;sbin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#srv"><span class="toc-number">2.2.11.</span> <span class="toc-text">&#x2F;srv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tmp"><span class="toc-number">2.2.12.</span> <span class="toc-text">&#x2F;tmp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#usr"><span class="toc-number">2.2.13.</span> <span class="toc-text">&#x2F;usr</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#var"><span class="toc-number">2.2.14.</span> <span class="toc-text">&#x2F;var</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#home"><span class="toc-number">2.2.15.</span> <span class="toc-text">&#x2F;home</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.</span> <span class="toc-text">文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E4%B8%8E%E5%AE%B9%E9%87%8F"><span class="toc-number">3.1.</span> <span class="toc-text">磁盘与容量</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/back_once.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 By AmorFati</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一丝还袅博山云</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '4484c1e4c8f98342b0d3',
+      clientSecret: 'c060858cb30720f8e48ee3cdea97f023c77eb90d',
+      repo: 'AmorFati-coder.github.io',
+      owner: 'AmorFati-coder',
+      admin: ['AmorFati-coder'],
+      id: '71b6dbb212e04d38052c75a7ec7623a9',
+      language: 'en',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
