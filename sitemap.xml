@@ -375,6 +375,20 @@
   </url>
   
   <url>
+    <loc>http://amorfati-coder.github.io/tags/TJU/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/Practical-Activity/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://amorfati-coder.github.io/tags/blog/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -418,20 +432,6 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/JPA/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/TJU/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/Practical-Activity/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -522,13 +522,6 @@
   </url>
   
   <url>
-    <loc>http://amorfati-coder.github.io/tags/pointer-structure/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://amorfati-coder.github.io/tags/disk/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -543,6 +536,13 @@
   </url>
   
   <url>
+    <loc>http://amorfati-coder.github.io/tags/pointer-structure/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://amorfati-coder.github.io/tags/book/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -551,13 +551,6 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/movie/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/MCS-51/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -579,6 +572,13 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/urllib/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/MCS-51/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -650,14 +650,14 @@
   </url>
   
   <url>
-    <loc>http://amorfati-coder.github.io/categories/Debug/</loc>
+    <loc>http://amorfati-coder.github.io/categories/Essays/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://amorfati-coder.github.io/categories/Essays/</loc>
+    <loc>http://amorfati-coder.github.io/categories/Debug/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -685,13 +685,6 @@
   </url>
   
   <url>
-    <loc>http://amorfati-coder.github.io/categories/C/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://amorfati-coder.github.io/categories/Linux/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -699,7 +692,7 @@
   </url>
   
   <url>
-    <loc>http://amorfati-coder.github.io/categories/Hardware/</loc>
+    <loc>http://amorfati-coder.github.io/categories/C/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -707,6 +700,13 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Spider/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/categories/Hardware/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
