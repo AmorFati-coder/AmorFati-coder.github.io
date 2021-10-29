@@ -596,25 +596,6 @@
     
     
     <entry>
-      <title>Spring Data REST 实现超媒体服务</title>
-      <link href="/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/"/>
-      <url>/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/</url>
-      
-        <content type="html"><![CDATA[<p><strong>Spring Boot 依赖</strong></p><ul><li>spring-boot-starter-data-rest</li></ul><p><strong>常用注解与类</strong></p><ul><li>@RepositoryRestResource</li><li>Resource&lt;T&gt;</li><li>PageResource&lt;T&gt;</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>HATEOAS</title>
       <link href="/2021/03/14/2021-03-14-HATEOAS/"/>
       <url>/2021/03/14/2021-03-14-HATEOAS/</url>
@@ -634,6 +615,25 @@
             <tag> HATEOAS </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring Data REST 实现超媒体服务</title>
+      <link href="/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Spring Boot 依赖</strong></p><ul><li>spring-boot-starter-data-rest</li></ul><p><strong>常用注解与类</strong></p><ul><li>@RepositoryRestResource</li><li>Resource&lt;T&gt;</li><li>PageResource&lt;T&gt;</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -715,25 +715,6 @@
     
     
     <entry>
-      <title>Spring MVC的切入点</title>
-      <link href="/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/"/>
-      <url>/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Spring-MVC-的拦截器">Spring MVC 的拦截器</h2><p><strong>核心接口</strong></p><ul><li>HandlerInterceptor<ul><li>boolean preHandle()</li><li>void postHandle()</li><li>void afterHandle()</li></ul></li></ul><p><strong>针对@ReponseBody和ResponseEntity的情况</strong></p><ul><li>ResponseBodyAdvice</li></ul><p><strong>针对异步请求的接口</strong></p><ul><li>AsyncHandlerInterceptor<ul><li>void afterConcurrentHandlingStarted()</li></ul></li></ul><h2 id="拦截器的配置方式">拦截器的配置方式</h2><p><strong>常规方法</strong></p><ul><li>WebMvcConfigurer.addInterceptors()</li></ul><p><strong>Spring Boot 中的配置</strong></p><ul><li>创建一个带@Configuration的WebMvcConfiguration配置类</li><li>不能带@EnableWebMvc</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spring MVC 的异常处理机制</title>
       <link href="/2021/03/09/2021-03-09-Spring-MVC-%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"/>
       <url>/2021/03/09/2021-03-09-Spring-MVC-%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/</url>
@@ -753,6 +734,25 @@
             <tag> MVC </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring MVC的切入点</title>
+      <link href="/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/"/>
+      <url>/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Spring-MVC-的拦截器">Spring MVC 的拦截器</h2><p><strong>核心接口</strong></p><ul><li>HandlerInterceptor<ul><li>boolean preHandle()</li><li>void postHandle()</li><li>void afterHandle()</li></ul></li></ul><p><strong>针对@ReponseBody和ResponseEntity的情况</strong></p><ul><li>ResponseBodyAdvice</li></ul><p><strong>针对异步请求的接口</strong></p><ul><li>AsyncHandlerInterceptor<ul><li>void afterConcurrentHandlingStarted()</li></ul></li></ul><h2 id="拦截器的配置方式">拦截器的配置方式</h2><p><strong>常规方法</strong></p><ul><li>WebMvcConfigurer.addInterceptors()</li></ul><p><strong>Spring Boot 中的配置</strong></p><ul><li>创建一个带@Configuration的WebMvcConfiguration配置类</li><li>不能带@EnableWebMvc</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
       
     </entry>
     
