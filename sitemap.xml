@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://amorfati-coder.github.io/2021/10/30/bolg-remake/</loc>
+    
+    <lastmod>2021-10-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/2021/10/28/2021-10-28-Ubuntu_remake/</loc>
+    
+    <lastmod>2021-10-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://amorfati-coder.github.io/log/index.html</loc>
     
     <lastmod>2021-10-29</lastmod>
@@ -59,13 +73,6 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/2021/07/11/2021-05-02-%E5%BD%B1%E5%8D%95%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2021-10-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/2021/10/28/2021-10-28-Ubuntu_remake/</loc>
     
     <lastmod>2021-10-28</lastmod>
     
@@ -361,7 +368,7 @@
 
   <url>
     <loc>http://amorfati-coder.github.io/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -369,273 +376,287 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/Modifiers/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/TJU/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/Practical-Activity/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/blog/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/git/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/yaml/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/RSS/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/Newsflow/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/Bean/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/JPA/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/DataSourse/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/MyBatis/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/redis/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/MongoDB/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/cache/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/MVC/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/static-resource-cache/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/MVC/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/%E9%9B%86%E5%90%88/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/AOP/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/RestTemplate/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/HATEOAS/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/MySQL/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/disk/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/file-system/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/pointer-structure/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/disk/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/file-system/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/book/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/movie/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/http/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/requests/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/urllib/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/MCS-51/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/idea/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/VMware/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/HiSpark/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/tags/Ubuntu/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/tags/CTF/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/Ubuntu/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/Hexo/</loc>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/tags/Butterfly/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -644,98 +665,98 @@
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Java/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Essays/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Debug/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Spring/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Docker/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Redis/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://amorfati-coder.github.io/categories/Linux/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/C/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://amorfati-coder.github.io/categories/Linux/</loc>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Spider/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Hardware/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Shell/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Jetbrain/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/Harmony/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati-coder.github.io/categories/webSecurity/</loc>
-    <lastmod>2021-10-29</lastmod>
+    <lastmod>2021-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
