@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>初见openmv</title>
+      <link href="/2021/10/31/%E5%88%9D%E8%A7%81openmv/"/>
+      <url>/2021/10/31/%E5%88%9D%E8%A7%81openmv/</url>
+      
+        <content type="html"><![CDATA[<center>白嫖的快乐</center><span id="more"></span>## openmv和opencv的区别- openmv    简单的来说，它是一个可编程的摄像头，通过MicroPython语言，可以实现你的逻辑。而且摄像头本身内置了一些图像处理算法，很容易使用。- opencv    Intel 开源计算机视觉库。它由一系列 C 函数和少量 C++ 类构成，实现了图像处理和计算机视觉方面的很多通用算法。<h2 id="固件升级">固件升级</h2><ul><li>连接openmv</li><li><a href="https://github.com/openmv/openmv-ide/releases/download">下载最新版IDE</a></li><li>根据提示一路确定</li><li>IDE右下角有升级固件的选项</li><li>擦除成功后重新引导<ul><li>工具-&gt; 运行引导加载程序(加载固件)</li><li>选择所在盘符-&gt; .openmv_disk</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hardware </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> openmv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>bolg_remake</title>
       <link href="/2021/10/30/bolg-remake/"/>
       <url>/2021/10/30/bolg-remake/</url>
