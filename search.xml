@@ -625,6 +625,25 @@
     
     
     <entry>
+      <title>Spring Data REST 实现超媒体服务</title>
+      <link href="/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/"/>
+      <url>/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Spring Boot 依赖</strong></p><ul><li>spring-boot-starter-data-rest</li></ul><p><strong>常用注解与类</strong></p><ul><li>@RepositoryRestResource</li><li>Resource&lt;T&gt;</li><li>PageResource&lt;T&gt;</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HATEOAS</title>
       <link href="/2021/03/14/2021-03-14-HATEOAS/"/>
       <url>/2021/03/14/2021-03-14-HATEOAS/</url>
@@ -644,25 +663,6 @@
             <tag> HATEOAS </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Spring Data REST 实现超媒体服务</title>
-      <link href="/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/"/>
-      <url>/2021/03/14/2021-03-14-Spring-Data-REST-%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1/</url>
-      
-        <content type="html"><![CDATA[<p><strong>Spring Boot 依赖</strong></p><ul><li>spring-boot-starter-data-rest</li></ul><p><strong>常用注解与类</strong></p><ul><li>@RepositoryRestResource</li><li>Resource&lt;T&gt;</li><li>PageResource&lt;T&gt;</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -744,25 +744,6 @@
     
     
     <entry>
-      <title>Spring MVC的切入点</title>
-      <link href="/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/"/>
-      <url>/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Spring-MVC-的拦截器">Spring MVC 的拦截器</h2><p><strong>核心接口</strong></p><ul><li>HandlerInterceptor<ul><li>boolean preHandle()</li><li>void postHandle()</li><li>void afterHandle()</li></ul></li></ul><p><strong>针对@ReponseBody和ResponseEntity的情况</strong></p><ul><li>ResponseBodyAdvice</li></ul><p><strong>针对异步请求的接口</strong></p><ul><li>AsyncHandlerInterceptor<ul><li>void afterConcurrentHandlingStarted()</li></ul></li></ul><h2 id="拦截器的配置方式">拦截器的配置方式</h2><p><strong>常规方法</strong></p><ul><li>WebMvcConfigurer.addInterceptors()</li></ul><p><strong>Spring Boot 中的配置</strong></p><ul><li>创建一个带@Configuration的WebMvcConfiguration配置类</li><li>不能带@EnableWebMvc</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spring MVC 的异常处理机制</title>
       <link href="/2021/03/09/2021-03-09-Spring-MVC-%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"/>
       <url>/2021/03/09/2021-03-09-Spring-MVC-%E7%9A%84%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/</url>
@@ -782,6 +763,25 @@
             <tag> MVC </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring MVC的切入点</title>
+      <link href="/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/"/>
+      <url>/2021/03/09/2021-03-09-Spring-MVC%E7%9A%84%E5%88%87%E5%85%A5%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Spring-MVC-的拦截器">Spring MVC 的拦截器</h2><p><strong>核心接口</strong></p><ul><li>HandlerInterceptor<ul><li>boolean preHandle()</li><li>void postHandle()</li><li>void afterHandle()</li></ul></li></ul><p><strong>针对@ReponseBody和ResponseEntity的情况</strong></p><ul><li>ResponseBodyAdvice</li></ul><p><strong>针对异步请求的接口</strong></p><ul><li>AsyncHandlerInterceptor<ul><li>void afterConcurrentHandlingStarted()</li></ul></li></ul><h2 id="拦截器的配置方式">拦截器的配置方式</h2><p><strong>常规方法</strong></p><ul><li>WebMvcConfigurer.addInterceptors()</li></ul><p><strong>Spring Boot 中的配置</strong></p><ul><li>创建一个带@Configuration的WebMvcConfiguration配置类</li><li>不能带@EnableWebMvc</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -813,31 +813,6 @@
     
     
     <entry>
-      <title>静态资源与缓存</title>
-      <link href="/2021/03/07/2021-03-07-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8E%E7%BC%93%E5%AD%98/"/>
-      <url>/2021/03/07/2021-03-07-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8E%E7%BC%93%E5%AD%98/</url>
-      
-        <content type="html"><![CDATA[<p>Spring Boot 中的静态资源与缓存</p><span id="more"></span><h2 id="Spring-Boot中的静态资源配置">Spring Boot中的静态资源配置</h2><h3 id="核心逻辑">核心逻辑</h3><ul><li>WebConfigurer.addResourceHandlers()</li></ul><h3 id="常用配置">常用配置</h3><ul><li>spring.mvc.static-path-pattern=/**</li><li>spring.resource.static-locations=classpath:/META-INF/resources/,classpath:/resources/,classpath:/path,classpath:/public/</li></ul><h2 id="Spring-Boot中的缓存配置">Spring Boot中的缓存配置</h2><h3 id="常用配置（默认单位时间为秒）">常用配置（默认单位时间为秒）</h3><ul><li>ResourceProperties.Cache</li><li>spring.resource.cache.cachecontrol.max-age=时间</li><li>spring.resource.cache.cachecontrol.no-cache=true/false</li><li>spring.resource.cache.cachecontrol.s-max-age=时间</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> static resource&amp;&amp;cache </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spring MVC</title>
       <link href="/2021/03/07/2021-03-07-Spring-MVC/"/>
       <url>/2021/03/07/2021-03-07-Spring-MVC/</url>
@@ -855,6 +830,31 @@
         <tags>
             
             <tag> MVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>静态资源与缓存</title>
+      <link href="/2021/03/07/2021-03-07-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8E%E7%BC%93%E5%AD%98/"/>
+      <url>/2021/03/07/2021-03-07-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8E%E7%BC%93%E5%AD%98/</url>
+      
+        <content type="html"><![CDATA[<p>Spring Boot 中的静态资源与缓存</p><span id="more"></span><h2 id="Spring-Boot中的静态资源配置">Spring Boot中的静态资源配置</h2><h3 id="核心逻辑">核心逻辑</h3><ul><li>WebConfigurer.addResourceHandlers()</li></ul><h3 id="常用配置">常用配置</h3><ul><li>spring.mvc.static-path-pattern=/**</li><li>spring.resource.static-locations=classpath:/META-INF/resources/,classpath:/resources/,classpath:/path,classpath:/public/</li></ul><h2 id="Spring-Boot中的缓存配置">Spring Boot中的缓存配置</h2><h3 id="常用配置（默认单位时间为秒）">常用配置（默认单位时间为秒）</h3><ul><li>ResourceProperties.Cache</li><li>spring.resource.cache.cachecontrol.max-age=时间</li><li>spring.resource.cache.cachecontrol.no-cache=true/false</li><li>spring.resource.cache.cachecontrol.s-max-age=时间</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> static resource&amp;&amp;cache </tag>
             
         </tags>
       
@@ -951,31 +951,6 @@
     
     
     <entry>
-      <title>Spring JPA</title>
-      <link href="/2021/03/03/2021-03-03-Spring%20JPA/"/>
-      <url>/2021/03/03/2021-03-03-Spring%20JPA/</url>
-      
-        <content type="html"><![CDATA[<!--!more--><h2 id="table">table</h2><p><code>@MappedSuperclass</code> 是类级别注解，该注解没有任何参数，被该注解标注的类不会映射到数据库中单独的表，但该类所拥有的属性都将映射到其子类的数据库表的列中。</p><p><code>@Entity</code>注释指名这是一个实体Bean，@Table注释指定了Entity所要映射带数据库表，其中@Table.name()用来指定映射表的表名。<br>如果缺省@Table注释，系统默认采用类名作为映射表的表名。实体Bean的每个实例代表数据表中的一行数据，行中的一列对应实例中的一个属性。</p><p><code>@Column</code>注释定义了将成员属性映射到关系表中的哪一列和该列的结构信息，属性如下：<br>1）name：映射的列名。如：映射tbl_user表的name列，可以在name属性的上面或getName方法上面加入；<br>2）unique：是否唯一；<br>3）nullable：是否允许为空；<br>4）length：对于字符型列，length属性指定列的最大字符长度；<br>5）insertable：是否允许插入；<br>6）updatetable：是否允许更新；<br>7）columnDefinition：定义建表时创建此列的DDL；<br>8）secondaryTable：从表名。如果此列不建在主表上（默认是主表），该属性定义该列所在从表的名字。<br><code>@Id</code>注释指定表的主键，它可以有多种生成方式：</p><p>1）TABLE：容器指定用底层的数据表确保唯一；<br>2）SEQUENCE：使用数据库德SEQUENCE列莱保证唯一（Oracle数据库通过序列来生成唯一ID）；<br>3）IDENTITY：使用数据库的IDENTITY列莱保证唯一；<br>4）AUTO：由容器挑选一个合适的方式来保证唯一；<br>5）NONE：容器不负责主键的生成，由程序来完成。</p><p><code>@GeneratedValue</code>注释定义了标识字段生成方式。</p><p><code>@Temporal</code>注释用来指定java.util.Date或java.util.Calender属性与数据库类型date、time或timestamp中的那一种类型进行映射。</p><p><code>@Temporal</code>(value=TemporalType.TIME)</p><h2 id="映射规则">映射规则</h2><p>映射规则：</p><ol><li><p>实体类<strong>必须</strong>用 @javax.persistence.<strong>Entity</strong> 进行注解；</p></li><li><p><strong>必须</strong>使用 @javax.persistence.<strong>Id</strong> 来注解一个主键；</p></li><li><p>实体类必须拥有一个 <strong>public 或者 protected</strong> 的<strong>无参</strong>构造函数，之外实体类还可以拥有其他的构造函数；</p></li><li><p>实体类必须是一个<strong>顶级类</strong>（top-level class）。一个枚举（enum）或者一个接口（interface）不能被注解为一个实体；</p></li><li><p>实体<strong>类</strong>不能是 <strong>final 类型</strong>的，也<strong>不能有 final 类型</strong>的方法；</p></li><li><p>如果实体类的一个实例需要用传值的方式调用（例如，远程调用），则这个实体类必须实现（implements）java.io.Serializable 接口。</p></li></ol><h2 id="Repository">Repository</h2><ul><li>CrudRepository &lt;T ,ID&gt;一些简单的方法</li><li>PagingAndSortingRepository&lt;T, ID&gt;</li><li>JpaRepository&lt;T, ID&gt;</li></ul><p><code>@enableJpaRepository</code></p><p><strong>定义查询</strong></p><ul><li>find By/read By/query By/get By</li><li>count By</li><li>OrderBy [Asc / Desc]</li><li>And / Or / IgnoreCase</li><li>Top / First / Distinct</li></ul><p><strong>分页查询</strong></p><ul><li>PagingAndSortingRepository&lt;T,ID&gt;</li><li>Pageable / Sort</li><li>Slice<T> / Page<T></li></ul><p><strong>查询实体</strong></p><p><code>NoRepositoryBean</code>仅在开始扩展具有功能的所有存储库时才需要它</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Spring </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JPA </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>配置多数据源</title>
       <link href="/2021/03/03/2021-03-03-%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/"/>
       <url>/2021/03/03/2021-03-03-%E9%85%8D%E7%BD%AE%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</url>
@@ -993,6 +968,31 @@
         <tags>
             
             <tag> DataSourse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring JPA</title>
+      <link href="/2021/03/03/2021-03-03-Spring%20JPA/"/>
+      <url>/2021/03/03/2021-03-03-Spring%20JPA/</url>
+      
+        <content type="html"><![CDATA[<!--!more--><h2 id="table">table</h2><p><code>@MappedSuperclass</code> 是类级别注解，该注解没有任何参数，被该注解标注的类不会映射到数据库中单独的表，但该类所拥有的属性都将映射到其子类的数据库表的列中。</p><p><code>@Entity</code>注释指名这是一个实体Bean，@Table注释指定了Entity所要映射带数据库表，其中@Table.name()用来指定映射表的表名。<br>如果缺省@Table注释，系统默认采用类名作为映射表的表名。实体Bean的每个实例代表数据表中的一行数据，行中的一列对应实例中的一个属性。</p><p><code>@Column</code>注释定义了将成员属性映射到关系表中的哪一列和该列的结构信息，属性如下：<br>1）name：映射的列名。如：映射tbl_user表的name列，可以在name属性的上面或getName方法上面加入；<br>2）unique：是否唯一；<br>3）nullable：是否允许为空；<br>4）length：对于字符型列，length属性指定列的最大字符长度；<br>5）insertable：是否允许插入；<br>6）updatetable：是否允许更新；<br>7）columnDefinition：定义建表时创建此列的DDL；<br>8）secondaryTable：从表名。如果此列不建在主表上（默认是主表），该属性定义该列所在从表的名字。<br><code>@Id</code>注释指定表的主键，它可以有多种生成方式：</p><p>1）TABLE：容器指定用底层的数据表确保唯一；<br>2）SEQUENCE：使用数据库德SEQUENCE列莱保证唯一（Oracle数据库通过序列来生成唯一ID）；<br>3）IDENTITY：使用数据库的IDENTITY列莱保证唯一；<br>4）AUTO：由容器挑选一个合适的方式来保证唯一；<br>5）NONE：容器不负责主键的生成，由程序来完成。</p><p><code>@GeneratedValue</code>注释定义了标识字段生成方式。</p><p><code>@Temporal</code>注释用来指定java.util.Date或java.util.Calender属性与数据库类型date、time或timestamp中的那一种类型进行映射。</p><p><code>@Temporal</code>(value=TemporalType.TIME)</p><h2 id="映射规则">映射规则</h2><p>映射规则：</p><ol><li><p>实体类<strong>必须</strong>用 @javax.persistence.<strong>Entity</strong> 进行注解；</p></li><li><p><strong>必须</strong>使用 @javax.persistence.<strong>Id</strong> 来注解一个主键；</p></li><li><p>实体类必须拥有一个 <strong>public 或者 protected</strong> 的<strong>无参</strong>构造函数，之外实体类还可以拥有其他的构造函数；</p></li><li><p>实体类必须是一个<strong>顶级类</strong>（top-level class）。一个枚举（enum）或者一个接口（interface）不能被注解为一个实体；</p></li><li><p>实体<strong>类</strong>不能是 <strong>final 类型</strong>的，也<strong>不能有 final 类型</strong>的方法；</p></li><li><p>如果实体类的一个实例需要用传值的方式调用（例如，远程调用），则这个实体类必须实现（implements）java.io.Serializable 接口。</p></li></ol><h2 id="Repository">Repository</h2><ul><li>CrudRepository &lt;T ,ID&gt;一些简单的方法</li><li>PagingAndSortingRepository&lt;T, ID&gt;</li><li>JpaRepository&lt;T, ID&gt;</li></ul><p><code>@enableJpaRepository</code></p><p><strong>定义查询</strong></p><ul><li>find By/read By/query By/get By</li><li>count By</li><li>OrderBy [Asc / Desc]</li><li>And / Or / IgnoreCase</li><li>Top / First / Distinct</li></ul><p><strong>分页查询</strong></p><ul><li>PagingAndSortingRepository&lt;T,ID&gt;</li><li>Pageable / Sort</li><li>Slice<T> / Page<T></li></ul><p><strong>查询实体</strong></p><p><code>NoRepositoryBean</code>仅在开始扩展具有功能的所有存储库时才需要它</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JPA </tag>
             
         </tags>
       
