@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://amorfati.site/pick/index.html</loc>
+    
+    <lastmod>2021-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://amorfati.site/2021/10/31/%E5%88%9D%E8%A7%81openmv/</loc>
     
     <lastmod>2021-10-31</lastmod>
@@ -31,13 +38,6 @@
   
   <url>
     <loc>http://amorfati.site/log/index.html</loc>
-    
-    <lastmod>2021-10-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://amorfati.site/pick/index.html</loc>
     
     <lastmod>2021-10-29</lastmod>
     
@@ -375,7 +375,7 @@
 
   <url>
     <loc>http://amorfati.site/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -383,294 +383,294 @@
   
   <url>
     <loc>http://amorfati.site/tags/Modifiers/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/TJU/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Practical-Activity/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/blog/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/git/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/yaml/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/RSS/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Newsflow/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Bean/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/JPA/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/DataSourse/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/MyBatis/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/redis/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/MongoDB/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/cache/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/MVC/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/static-resource-cache/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/%E9%9B%86%E5%90%88/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/AOP/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/RestTemplate/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/HATEOAS/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/MySQL/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/pointer-structure/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/disk/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/file-system/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/book/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/movie/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/http/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/requests/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/urllib/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/MCS-51/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/idea/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/VMware/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/%E7%94%B5%E5%B7%A5%E7%94%B5%E5%AD%90/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/HiSpark/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Ubuntu/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/CTF/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Hexo/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/Butterfly/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/tags/openmv/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -679,98 +679,98 @@
   
   <url>
     <loc>http://amorfati.site/categories/Java/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Essays/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Debug/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Spring/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Docker/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Redis/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/C/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Linux/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Spider/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Hardware/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Shell/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Jetbrain/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/Harmony/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://amorfati.site/categories/webSecurity/</loc>
-    <lastmod>2021-10-31</lastmod>
+    <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
