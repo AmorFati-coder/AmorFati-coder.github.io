@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>非线性结构 | AmorFati's Blog</title><meta name="keywords" content="非线性结构"><meta name="author" content="AmorFati"><meta name="copyright" content="AmorFati"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="二叉树、图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非线性结构">
+<meta property="og:url" content="http://example.com/2021/06/16/2021-06-13-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="AmorFati&#39;s Blog">
+<meta property="og:description" content="二叉树、图">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/back_love.png">
+<meta property="article:published_time" content="2021-06-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-17T09:41:06.940Z">
+<meta property="article:author" content="AmorFati">
+<meta property="article:tag" content="非线性结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/back_love.png"><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="http://example.com/2021/06/16/2021-06-13-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="CNmY-k__y9LvpP2rrFez_qZrnxsTWpqaCiQyCWCghb0"/><meta name="baidu-site-verification" content="code-DbGfNvmlFb"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: AmorFati","link":"Link: ","source":"Source: AmorFati's Blog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '非线性结构',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-06-17 17:41:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">59</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">43</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/pick/"><span> Pick</span></a></li><li><a class="site-page child" href="/log/"><span> Log</span></a></li><li><a class="site-page child" href="/gallery/"><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/back_love.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AmorFati's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/pick/"><span> Pick</span></a></li><li><a class="site-page child" href="/log/"><span> Log</span></a></li><li><a class="site-page child" href="/gallery/"><span> Gallery</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">非线性结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-06-15T16:00:00.000Z" title="Created 2021-06-16 00:00:00">2021-06-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-06-17T09:41:06.940Z" title="Updated 2021-06-17 17:41:06">2021-06-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C/">C++</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="非线性结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><center>二叉树、图</center>
+
+<span id="more"></span>
+
+<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>树描述数据元素之间的层级关系</p>
+</blockquote>
+<ul>
+<li><p>双亲、子女、边</p>
+<ul>
+<li>边：双亲到子女</li>
+</ul>
+</li>
+<li><p>兄弟</p>
+<blockquote>
+<p>具有同一双亲结点</p>
+</blockquote>
+</li>
+<li><p>路径、路径长度</p>
+</li>
+<li><p>结点的层数</p>
+<blockquote>
+<p>根节点的层数为0</p>
+</blockquote>
+</li>
+<li><p>树的深度（高度）</p>
+<blockquote>
+<p>层数最大</p>
+</blockquote>
+</li>
+<li><p>结点的度数、树的度数</p>
+<ul>
+<li>结点子女的个数称为该结点的“度数”</li>
+<li>树中度数最大的结点的度数叫做“树的度数“</li>
+</ul>
+</li>
+<li><p>树叶、分支结点</p>
+</li>
+<li><p>有序树、无序树</p>
+</li>
+<li><p>森林</p>
+<blockquote>
+<p>m棵互不相交的集合称为森林</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><blockquote>
+<p>结点有左右之分</p>
+</blockquote>
+<ul>
+<li><p>第i层，节点数目最多为2^i^</p>
+</li>
+<li><p>深度为k的二叉树至多有2^k+1^ - 1个结点</p>
+</li>
+<li><p>终端结点为n0、度数为2的结点个数为n2， n0 &#x3D; n2 + 1</p>
+</li>
+<li><p>满二叉树</p>
+</li>
+</ul>
+<blockquote>
+<p>深度为k，且有2^k+1^ -1个结点</p>
+</blockquote>
+<ul>
+<li>完全二叉树</li>
+</ul>
+<blockquote>
+<p>不一定是满二叉树</p>
+</blockquote>
+<ul>
+<li>具有n个结点的完全二叉树的深度为[logn]</li>
+</ul>
+<h3 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h3><blockquote>
+<p>D 根 L 左子树 R 右子树</p>
+</blockquote>
+<ul>
+<li>先序遍历 DLR</li>
+<li>中序遍历 LDR</li>
+<li>后序遍历 LRD</li>
+<li>层次遍历</li>
+</ul>
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><ul>
+<li><p>树转二叉树</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2X7ZZR"><img src="https://z3.ax1x.com/2021/06/16/2X7ZZR.png" alt="2X7ZZR.png"></a></p>
+</li>
+<li><p>森林转二叉树</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2X7ui6"><img src="https://z3.ax1x.com/2021/06/16/2X7ui6.png" alt="2X7ui6.png"></a></p>
+</li>
+<li><p>二叉树到森林</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2X7QzD"><img src="https://z3.ax1x.com/2021/06/16/2X7QzD.png" alt="2X7QzD.png"></a></p>
+</li>
+</ul>
+<h3 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h3><h4 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h4><ul>
+<li><p>扩充二叉树和带权路径长度</p>
+<blockquote>
+<p>带有权值的叶结点叫做扩充二叉树的外结点，其余的分结点叫做内结点</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2XHXEn"><img src="https://z3.ax1x.com/2021/06/16/2XHXEn.png" alt="2XHXEn.png"></a></p>
+</li>
+<li><p>最优二叉树</p>
+<blockquote>
+<p>WPL最小的称为最优二叉树</p>
+</blockquote>
+</li>
+<li><p>哈夫曼树</p>
+<blockquote>
+<p>利用哈夫曼提出的方法构造出的最优二叉树</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="哈夫曼树的构造"><a href="#哈夫曼树的构造" class="headerlink" title="哈夫曼树的构造"></a>哈夫曼树的构造</h4><ol>
+<li>给定n个权值，构造含有n棵扩充二叉树的森林F</li>
+<li>结点的权值为<strong>最小</strong>和<strong>次小</strong>的两棵二叉树作为左右子树构造出新的二叉树，权值为二者之和</li>
+<li>从森林中删去组称新二叉树的两颗树，</li>
+<li>重复2. 3.</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/2vZ9eJ"><img src="https://z3.ax1x.com/2021/06/17/2vZ9eJ.png" alt="2vZ9eJ.png"></a></p>
+<h4 id="哈夫曼树的应用"><a href="#哈夫曼树的应用" class="headerlink" title="哈夫曼树的应用"></a>哈夫曼树的应用</h4><ul>
+<li><p>哈夫曼编码</p>
+<blockquote>
+<p>以上图为例</p>
+</blockquote>
+<p>$C &#x3D; {A, B, C, D , E, F}$对应的频度为${6,2,3,3,4,9}$</p>
+<p>A &#x3D; 01 B &#x3D; 000 C &#x3D; 001 D &#x3D; 100 E &#x3D; 101 F &#x3D; 11</p>
+<blockquote>
+<p>左子女编码为0，右子女编码为1</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><blockquote>
+<p>网状关系的数据结构，关系任意</p>
+</blockquote>
+<h2 id="图的概念"><a href="#图的概念" class="headerlink" title="图的概念"></a>图的概念</h2><blockquote>
+<p>形式上用二重组表示$G &#x3D; (V, E)$ V（G）是顶点集（有穷非空），E（G）表示边集（边有穷集合）</p>
+</blockquote>
+<ul>
+<li>邻接顶点</li>
+<li>顶点的度<ul>
+<li>边的数目</li>
+<li>入度</li>
+<li>出度</li>
+</ul>
+</li>
+<li>子图</li>
+<li>权</li>
+</ul>
+<blockquote>
+<p>数据信息</p>
+</blockquote>
+<ul>
+<li><p>路径</p>
+</li>
+<li><p>路径长度</p>
+<blockquote>
+<p>边之和</p>
+</blockquote>
+</li>
+<li><p>简单路径</p>
+<blockquote>
+<p>除了第一个结点和最后一个结点相同，其他顶点都不相同</p>
+</blockquote>
+</li>
+<li><p>回路（环）</p>
+<blockquote>
+<p>第一个顶点与最后一个顶点相同</p>
+</blockquote>
+</li>
+<li><p>有根的图</p>
+<blockquote>
+<p>从V可以到达任意一个顶点</p>
+</blockquote>
+</li>
+<li><p>连通图</p>
+<blockquote>
+<p>任意两个不同的顶点都连通</p>
+</blockquote>
+</li>
+<li><p>连通分量</p>
+</li>
+<li><p>强连通图</p>
+</li>
+<li><p>强连通分量</p>
+</li>
+</ul>
+<h2 id="图的储存结构"><a href="#图的储存结构" class="headerlink" title="图的储存结构"></a>图的储存结构</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">AmorFati</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2021/06/16/2021-06-13-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/">http://example.com/2021/06/16/2021-06-13-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/">非线性结构</a></div><div class="post_share"><div class="social-share" data-image="/img/back_love.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/07/11/2021-07-11-%E6%B3%A8%E9%87%8A%E6%A8%A1%E6%9D%BF/"><img class="prev-cover" src="/img/back_love.png" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">注释模板</div></div></a></div><div class="next-post pull-right"><a href="/2021/06/13/2021-06-13-%E4%BA%A4%E9%80%9A%E7%81%AF/"><img class="next-cover" src="/img/back_love.png" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">交通灯</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">1.2.</span> <span class="toc-text">二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">二叉树的遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.2.</span> <span class="toc-text">转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91"><span class="toc-number">1.2.3.</span> <span class="toc-text">哈夫曼树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">哈夫曼树的构造</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">哈夫曼树的应用</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text">图的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E5%82%A8%E5%AD%98%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">图的储存结构</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/img/back_love.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By AmorFati</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">一丝还袅博山云</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '4484c1e4c8f98342b0d3',
+      clientSecret: 'c060858cb30720f8e48ee3cdea97f023c77eb90d',
+      repo: 'AmorFati-coder.github.io',
+      owner: 'AmorFati-coder',
+      admin: ['AmorFati-coder'],
+      id: 'e5423db1c21b36faace4d83b4eb5ecf2',
+      language: 'en',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "5f9b7cfb-eb09-462c-90f2-57653c2d3094";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (true) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
